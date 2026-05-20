@@ -73,18 +73,27 @@ h3 {
   flex-shrink: 0;
 }
 
-button {
+button,
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 42px;
   height: 38px;
   border: 1px solid #c7cfdb;
   border-radius: 6px;
   background: #ffffff;
   color: #1f2937;
+  padding: 0 12px;
   font-weight: 800;
   cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
 }
 
-button:hover {
+button:hover,
+.action-link:hover {
   background: #eef4ff;
   border-color: #8fb5ff;
 }
