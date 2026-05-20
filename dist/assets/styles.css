@@ -134,6 +134,33 @@ main {
   margin: 2px 0 0;
 }
 
+.source-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.inline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid #c7cfdb;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.inline-button:hover {
+  background: #eef4ff;
+  border-color: #8fb5ff;
+}
+
 .notice {
   margin-top: 16px;
   padding: 18px 22px;
