@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우지커피 양도양수 Q&A 전략집 (Net 2.3억)</title>
+    <style>
+        body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; line-height: 1.7; max-width: 900px; margin: 0 auto; padding: 40px 20px; color: #333; background-color: #f4f7f6; }
+        .header { text-align: center; margin-bottom: 50px; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .header h1 { color: #8b4513; font-size: 28px; margin-bottom: 10px; }
+        .header .meta { font-size: 14px; color: #777; }
+        .header .brand-tag { display: inline-block; background: #8b4513; color: white; padding: 4px 12px; border-radius: 50px; font-size: 12px; margin-top: 10px; font-weight: bold; }
+        .category-group { margin-bottom: 40px; }
+        .category-title { font-size: 18px; font-weight: bold; color: #8b4513; border-bottom: 2px solid #8b4513; padding-bottom: 5px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .category-title::before { content: "◆"; font-size: 12px; }
+        .qa-card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border: 1px solid #eef2f1; }
+        .question { font-weight: bold; font-size: 17px; color: #2c3e50; margin-bottom: 15px; display: flex; gap: 12px; }
+        .question .q-icon { color: #8b4513; font-weight: 900; }
+        .answer { color: #444; font-size: 16px; white-space: pre-wrap; padding-left: 28px; border-left: 2px solid #f0f0f0; }
+        .no-print { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        button { padding: 12px 25px; font-size: 15px; cursor: pointer; background-color: #8b4513; color: white; border: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-weight: bold; transition: 0.2s; }
+        button:hover { background-color: #6d360f; transform: translateY(-2px); }
+        @media print {
+            .no-print { display: none; }
+            body { background-color: white; padding: 0; }
+            .header, .qa-card { box-shadow: none; border: 1px solid #eee; }
+            .qa-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print">
+        <button onclick="window.print()">전략집 PDF 저장 / 인쇄</button>
+    </div>
+    <div class="header">
+        <span class="brand-tag">우지커피 OO점</span>
+        <h1>양도양수 성공 전략 Q&A 리포트</h1>
+        <p class="meta">목표 권리금: 2억 3,000만 원 (Net) | 작성일: 2026-05-20</p>
+    </div>
+    
+    <div id="content">
+        <!-- Content injected by JS -->
+    </div>
+
+    <script>
+        const db = {
+          "database": [
+            {
+              "id": 1,
+              "category": "개념정의",
+              "question": "권리금 2억 3,000만 원 안에 보증금이 포함된 건가요? 보증금은 별도인가요?",
+              "answer": "결론부터 말씀드리면, '보증금은 무조건 별도'입니다. 사장님이 제시하신 권리금 2억 3,000만 원은 순수하게 매장의 시설, 인테리어, 단골 고객, 그리고 현재 나오고 있는 막대한 매출에 대한 가치(프리미엄)를 뜻하는 금액입니다.\n\n상가 임대차 시장에서 보증금과 권리금의 개념은 완전히 분리됩니다.\n- 상가 보증금: 건물주에게 맡겨두었다가 나중에 장사를 접고 나갈 때 '건물주에게 그대로 돌려받는 돈'입니다.\n- 권리금: 기존 점주(사장님)가 매장을 일구어 놓은 대가로 '새로운 세입자(양수인)에게 직접 받고 끝내는 돈'입니다.\n\n따라서 계약을 진행할 때 매수자가 준비해야 하는 총 창업 자금은 [권리금 2억 3,000만 원 + 해당 상가의 원래 보증금]이 됩니다."
+            },
+            {
+              "id": 2,
+              "category": "본사협상",
+              "question": "매장 관리하는 바이저에게 얘길하면될까? 아니면 처음 가맹상담 받았던 가맹팀장에게 얘길하는게 나을까?",
+              "answer": "처음 가맹 상담을 진행했던 ‘가맹개발팀 팀장’에게 연락하시는 것이 훨씬 빠르고 정확합니다.\n\n- 매장 관리 바이저 (FC): 주 업무는 현재 운영 중인 매장의 '관리'입니다.\n- 가맹개발팀 팀장: 신규 가맹 유치를 위해 예비 창업자 DB를 실시간으로 관리하는 사람입니다. A급 매물 대기자 명단을 쥐고 있습니다."
+            },
+            {
+              "id": 3,
+              "category": "본사협상",
+              "question": "가맹팀장한테 비공식적으로 몰래 돈을 좀 챙겨주는건?",
+              "answer": "절대 안 됩니다! 업무상 배임 및 사기 혐의로 소송전에 휘말릴 빌미를 줄 수 있습니다. 대신 '성사 시 가맹팀 회식비 두둑하게 쏘겠다'는 구두 약속 정도로 매끄럽게 아군으로 만드세요."
+            },
+            {
+              "id": 5,
+              "category": "가치증명",
+              "question": "3월 매출 3,157만원, 4월 3,615만원... 우상향 매출 데이터가 무리한 과장일까?",
+              "answer": "전혀 아닙니다. 이건 '진짜 찐 우상향'입니다. 카페는 봄부터 진짜 실력입니다. 5월 예상 매출은 약 3,900만 원 내외로 추산되며, 3-4-5월로 이어지는 이 그래프는 시장에서 부르는 게 값인 특A급 매물임을 증명합니다."
+            },
+            {
+              "id": 6,
+              "category": "중개수수료",
+              "question": "2.3억 권리금 입금가(Net)를 지키면서 컨설턴트 수수료 문제는 어떻게 해결하나?",
+              "answer": "사장님은 2억 3,000만 원 정가 그대로 시장에 올리고, 계약 성사 시 매수자에게 별도의 '컨설팅 용역 수수료'를 청구하도록 선을 그으세요. 진짜 돈 있는 매수자들은 이를 안전비용이라 생각하고 지불합니다."
+            },
+            {
+              "id": 7,
+              "category": "개인명분",
+              "question": "자녀 학업 문제로 인한 이사 명분, 양도 시 불리할까?",
+              "answer": "오히려 '최고의 치트키 명분'입니다. 매장에 하자가 있어서 파는 게 아니라는 신뢰를 주기 때문입니다. 건물주와 매수자 모두를 안심시키는 가장 깔끔한 이유입니다."
+            },
+            {
+              "id": 12,
+              "category": "계약행정",
+              "question": "넷가 요구 시 이중계약서 위험은 없나?",
+              "answer": "절대 이중계약서를 쓰지 마세요. 실제 권리금 계약서에는 정직하게 2억 3,000만 원을 적고, 매수인과 컨설턴트 사이에 별도의 용역 계약을 맺는 것이 정석입니다."
+            },
+            {
+              "id": 13,
+              "category": "계약행정",
+              "question": "최종 행동 순서 요약",
+              "answer": "1. 카페 매물 글 등록 + 가맹개발팀장 접수\n2. 임대인 사전 작업 (학업 이사 명분 전달)\n3. 가계약금 수령\n4. 권리금 및 임대차 계약 동시 체결 (부동산)\n5. 잔금 확인 후 열쇠 인수인계"
+            }
+          ]
+        };
+
+        const content = document.getElementById('content');
+        const categories = [...new Set(db.database.map(item => item.category))];
+
+        categories.forEach(cat => {
+            const group = document.createElement('div');
+            group.className = 'category-group';
+            group.innerHTML = `<div class="category-title">${cat}</div>`;
+            
+            db.database.filter(i => i.category === cat).forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'qa-card';
+                card.innerHTML = `
+                    <div class="question"><span class="q-icon">Q.</span> ${item.question}</div>
+                    <div class="answer">${item.answer}</div>
+                `;
+                group.appendChild(card);
+            });
+            content.appendChild(group);
+        });
+    </script>
+</body>
+</html>
