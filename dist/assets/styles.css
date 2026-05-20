@@ -1,0 +1,286 @@
+:root {
+  color: #202124;
+  background: #f6f7f9;
+  font-family:
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui,
+    sans-serif;
+  line-height: 1.65;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f7f9;
+}
+
+a {
+  color: #1558d6;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 22px clamp(20px, 5vw, 72px);
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid #d8dee8;
+  backdrop-filter: blur(12px);
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.22;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 21px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+button {
+  min-width: 42px;
+  height: 38px;
+  border: 1px solid #c7cfdb;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #eef4ff;
+  border-color: #8fb5ff;
+}
+
+main {
+  width: min(1040px, calc(100% - 32px));
+  margin: 28px auto 56px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+}
+
+.summary dl {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.summary dl div {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.summary dt {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.summary dd {
+  margin: 2px 0 0;
+}
+
+.notice {
+  margin-top: 16px;
+  padding: 18px 22px;
+  background: #fff8e6;
+  border: 1px solid #f0d27a;
+  border-radius: 8px;
+}
+
+.notice p {
+  margin-bottom: 0;
+}
+
+.toc,
+.qa-card {
+  margin-top: 18px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+}
+
+.toc ol {
+  columns: 2;
+  padding-left: 24px;
+  margin: 0;
+}
+
+.toc li {
+  break-inside: avoid;
+  margin-bottom: 8px;
+}
+
+summary {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 14px;
+  align-items: start;
+  cursor: pointer;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.number {
+  display: inline-grid;
+  width: 44px;
+  height: 36px;
+  place-items: center;
+  border-radius: 6px;
+  background: #17324d;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.answer {
+  margin: 18px 0 0 66px;
+  color: #333b46;
+}
+
+.answer p {
+  margin-bottom: 12px;
+}
+
+.answer p:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto 40px;
+  color: #667085;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    position: static;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .toc ol {
+    columns: 1;
+  }
+
+  .answer {
+    margin-left: 0;
+  }
+}
+
+@page {
+  size: A4 portrait;
+  margin: 14mm;
+}
+
+@media print {
+  :root,
+  body {
+    background: #ffffff;
+    color: #111827;
+    font-size: 11pt;
+  }
+
+  .topbar {
+    position: static;
+    padding: 0 0 10mm;
+    border-bottom: 1px solid #111827;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  main,
+  footer {
+    width: 100%;
+    margin: 0;
+  }
+
+  .summary,
+  .notice,
+  .toc,
+  .qa-card {
+    border: 1px solid #c9ced6;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .qa-card {
+    margin-top: 5mm;
+    padding: 7mm;
+  }
+
+  details {
+    display: block;
+  }
+
+  details:not([open]) .answer {
+    display: block;
+  }
+
+  .number {
+    background: #111827;
+    color: #ffffff;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  a {
+    color: #111827;
+  }
+}
